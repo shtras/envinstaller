@@ -2,7 +2,7 @@
 
 set -e
 
-SETUP_DIR=`pwd`/src
+SETUP_DIR=$(dirname $0)/src
 mkdir -p ~/src
 sudo apt-get update
 sudo apt install -y build-essential git libssl-dev nasm wget curl zlib1g-dev zsh libcurl4-openssl-dev zsh nasm yasm \
@@ -25,9 +25,9 @@ if [[ "$REPLY" != "n" ]] ; then
     curl https://pyenv.run | bash
     cp $SETUP_DIR/.bashrc ~
     source ~/.bashrc
-    pyenv install 3.10
+    pyenv install 3.10.0
     sudo pip install virtualenvwrapper
-    pyenv local 3.10
+    pyenv local 3.10.0
     source ~/.bashrc
     mkvirtualenv --python $(pyenv which python) syndication_env
 fi
