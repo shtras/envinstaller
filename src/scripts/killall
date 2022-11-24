@@ -1,9 +1,0 @@
-#!/bin/bash
-cmd="taskkill"
-if [ "$1" = "-9" ]
-then
-  cmd="$cmd /F /IM $2.exe"
-else
-  cmd="$cmd /IM $1.exe"
-fi;
-$cmd 2>&1 | grep -v "not found"

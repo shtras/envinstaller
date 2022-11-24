@@ -1,2 +1,0 @@
-#!/bin/bash
-echo $1 | sed -e "s/\\/cygdrive\\/\(.\)/\1:/g" | sed -e "s/^\\//D:\\\\\\\\Cygwin64\\\\\\\\/g" | sed -e "s/\\//\\\\\\\\/g" | sed -e "s/ /\\\\ /g"
